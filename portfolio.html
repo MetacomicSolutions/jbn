@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 15px;
+        }
+
+        body {
+            margin: 0;
+            --color-text: #fff;
+            background-image: url(/imgs/wp\ \(95\).jpg);
+            --color-bg: #000;
+            --color-link: rgba(255,255,255,0.7);
+            --color-link-hover: #fff;
+            color: var(--color-text);
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        /* Page Loader */
+        .js .loading::before,
+        .js .loading::after {
+            content: '';
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .js .loading::before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-bg);
+        }
+
+        .js .loading::after {
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            margin: -30px 0 0 -30px;
+            border-radius: 50%;
+            opacity: 0.4;
+            background: var(--color-link);
+            animation: loaderAnim 0.7s linear infinite alternate forwards;
+        }
+
+        @keyframes loaderAnim {
+            to {
+                opacity: 1;
+                transform: scale3d(0.5, 0.5, 1);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-link);
+            outline: none;
+        }
+
+        a:hover {
+            color: var(--color-link-hover);
+            outline: none;
+        }
+
+        /* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+        a:focus {
+            /* Provide a fallback style for browsers that don't support :focus-visible */
+            outline: none;
+            background: lightgrey;
+        }
+
+        a:focus:not(:focus-visible) {
+            /* Remove the focus indicator on mouse-focus for browsers that do support :focus-visible */
+            background: transparent;
+        }
+
+        a:focus-visible {
+            /* Draw a very noticeable focus style for keyboard-focus on browsers that do support :focus-visible */
+            outline: 2px solid #fff;
+            background: transparent;
+        }
+
+        .unbutton {
+            background: none;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .unbutton:focus {
+            outline: none;
+        }
+
+        .frame {
+            z-index: 100;
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-areas: 'title links sponsor' 'credits credits credits';
+            grid-column-gap: 3vw;
+            grid-row-gap: 1rem;
+            justify-content: space-between;
+            align-content: space-between;
+            text-align: left;
+        }
+
+        .frame a {
+            pointer-events: auto;
+        }
+
+        .frame__title {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 500;
+            grid-area: title;
+        }
+
+        .frame__links {
+            grid-area: links;
+        }
+
+        .frame__links a:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        .frame__credits {
+            grid-area: credits;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1vh;
+        }
+
+        .grid__item {
+            height: 47.5vh;
+            /* For an item height of 50vh we need to consider the grid gap and remove half of it from the item height. 
+            Like that we guarantee that the looping content starts seamlessly. If the gap would be 2vh, our item height would be 49vh */
+            background-size: cover;
+            background-position: 50% 20%;
+        }
+
+        .grid__item:nth-child(3n-2) {
+            border-radius: 0 2rem 2rem 0;
+        }
+
+        .grid__item:nth-child(3n) {
+            border-radius: 2rem 0 0 2rem;
+        }
+
+        .grid__item:nth-child(3n-1) {
+            border-radius: 2rem;
+        }
+
+        @media screen and (min-width: 53em) {
+            .frame {
+                height: 100vh;
+                align-items: space-between;
+            }
+        }
+    </style>
+</head>
+<body class="loading">
+    <main>
+        <div class="grid">
+            <div class="grid__item" style="background-image:url(/templates/artemis2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/balcombe2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/boultont2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/bourke2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/hay2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/healeys2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/heape2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/heffernan2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/iris2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/knox2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/lane2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/lingham2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/louden2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/merlin2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/merriman2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/meyers2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/russell2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/warburton2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/ulster2.png);"></div>
+            <div class="grid__item" style="background-image:url(/templates/turner2.png);"></div>
+        </div>
+    </main>
+
+    <script type="module">
+        import imageLoaded from "https://esm.sh/image-loaded";
+        import StudioFreightLenis from "https://esm.sh/@studio-freight/lenis";
+
+        const lenis = new StudioFreightLenis({
+            smooth: true,
+            infinite: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // repeat first six items by cloning them and appending them to the .grid
+        const repeatItems = (parentEl, total = 0) => {
+            const items = [...parentEl.children];
+            for (let i = 0; i <= total - 1; ++i) {
+                var cln = items[i].cloneNode(true);
+                parentEl.appendChild(cln);
+            }
+        };
+        repeatItems(document.querySelector(".grid"), 6);
+
+        imageLoaded(
+            document.querySelectorAll(".grid__item"),
+            { background: true },
+            () => {
+                document.body.classList.remove("loading");
+            }
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="utf-8">
+    <link rel="manifest" href="./manifest.json">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/jpg" href="./imgs/jbadgegreadient.png">
+
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="PWA">
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="./imgs/jbadgegreadient.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-title" content="S7EN">
+
+    <link rel="stylesheet" type="text/css" href="css/stylez2.css">
+    <link rel="shortcut icon" href="imgs/jbadgegreadient.png" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background:linear-gradient(black, rgb(143, 0, 138), rgb(12, 0, 187), rgb(255, 0, 0), rgb(111, 0, 255), rgb(0, 0, 0))
+        }
+
+        .vertical-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .vertical-gallery img {
+            width: 50vw;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .vertical-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .coverlogo {
+            margin-bottom: 6px;
+            background-color: black;
+            height: 64px;
+            filter: grayscale(0%);
+            margin-top: 22px;
+            border-radius: 32px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div style="margin: 0; background-position-x: center; color: white; font-weight: bold; position: relative; text-align: center; animation: fadeIn 3s forwards;">
+        <a href="index.html">
+            <img class="coverlogo" style="height: 7vh;" src="imgs/jbadgegreadient.png" alt="" />
+        </a>
+    </div>
+
+
+    <div class="rapper">
+        <div class="typing-demo">
+        </div>
+    </div>
+
+    <div class="vertical-gallery">
+        <img src="templates/artemis2.png" alt="Image 1">
+        <img src="templates/balcombe2.png" alt="Image 2">
+        <img src="templates/warburton2.png" alt="Image 3">
+        <img src="templates/heape2.png" alt="Image 4">
+        <img src="templates/heffernan2.png" alt="Image 5">
+        <img src="templates/knox2.png" alt="Image 3">
+        <img src="templates/lane2.png" alt="Image 4">
+        <img src="templates/merlin2.png" alt="Image 5">
+    </div>
+
+    <div>
+        <a href="index.html">
+            <img style="height: 52px; border-radius: 20px; bottom: 4px; margin-top: 28px;" src="imgs/jbadgegreadient.png" alt="">
+        </a>
+    </div>
+
+</body>
+
+</html>

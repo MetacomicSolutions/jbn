@@ -1,0 +1,16 @@
+{
+  "name": "S7EN",
+  "short_name": "S7EN",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "description": "S7EN",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "./imgs/jbadgegreadientsq.png",
+      "sizes": "1000X1000",
+      "type": "image/png"
+    }
+  ]
+}
