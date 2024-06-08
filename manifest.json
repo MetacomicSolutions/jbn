@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "User",
   "short_name": "User",
   "start_url": ".",
@@ -9,6 +10,18 @@
   "icons": [
     {
       "src": "./imgs/users/usergradfd.png",
+=======
+  "name": "Justin",
+  "short_name": "Justin",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "description": "Justin",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "./imgs/justinfde.png",
+>>>>>>> 52a2b325c14b50ba0f9c776a2f6b143846b06369
       "sizes": "1000X1000",
       "type": "image/png"
     }
