@@ -1,0 +1,16 @@
+{
+  "name": "Nasa",
+  "short_name": "Nasa",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "description": "Nasa",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "./imgs/nasa-logofd.png",
+      "sizes": "1000X1000",
+      "type": "image/png"
+    }
+  ]
+}
