@@ -2,7 +2,7 @@
 <<<<<<< HEAD
   "name": "User",
   "short_name": "User",
-  "start_url": ".",
+  "start_url": "https://metacomicsolutions.github.io/bio/",
   "display": "standalone",
   "background_color": "#000000",
   "description": "User",
